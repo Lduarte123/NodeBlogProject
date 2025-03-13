@@ -12,8 +12,6 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(_dirName, "views", "home.html"))
 })
 
-
-
 app.listen(port, () => {
     console.log("http://localhost:3000")
 })
