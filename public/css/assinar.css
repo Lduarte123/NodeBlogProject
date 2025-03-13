@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+
+}
+.formulario{
+    border: solid 1px black;
+    width: 70%;
+    height: 70vh;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.botoes{
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+}
+
+.botoes button {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Ajusta o padding dos botões */
+    cursor: pointer; /* Mostra que o botão é clicável */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+.botoes button:hover {
+    background-color: #45a049; /* Cor de fundo quando o botão é hover */
+}
+
+.botoes button[type="reset"] {
+    background-color: #f44336; /* Cor de fundo para o botão Limpar (vermelho) */
+}
+
+.botoes button[type="reset"]:hover {
+    background-color: #e53935; /* Cor de fundo quando o botão Limpar é hover */
+}
