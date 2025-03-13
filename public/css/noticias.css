@@ -1,0 +1,36 @@
+.body{
+    background-color: black;
+    background-image: url("/image/tecnologia_image.png");
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.container{     
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    width: 90vw;
+    min-height: 80vh;
+    border: solid 5px white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: bottom;
+    align-items: center;
+
+    /* gpt */
+    position: absolute; /* Posiciona o container de forma absoluta */
+    top: 50%; /* Coloca no meio da tela */
+    left: 50%; /* Coloca no meio da tela */
+    transform: translate(-50%, -50%); /* Ajusta o container para ficar centralizado */
+}
+
+.inner-container{
+    font-family:'Courier New', Courier, monospace;
+    background-color: rgb(201, 201, 201);
+    width: 20em; /* Largura do container interno */
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: left;
+    margin-right: auto;
+}

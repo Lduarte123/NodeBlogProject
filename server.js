@@ -12,7 +12,9 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(_dirName, "views", "home.html"))
 })
 
-
+app.get("/noticias", (req, res) => {
+    res.status(200).sendFile(path.join(_dirName, "views", "noticias.html"))
+})
 
 app.listen(port, () => {
     console.log("http://localhost:3000")
