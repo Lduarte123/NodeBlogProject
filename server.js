@@ -1,10 +1,15 @@
 import express from 'express';
+import fs from 'fs';
+import path from 'path';
 
 const app = express()
 const port = 3000
+const _dirName = path.resolve()
+
+app.use(express.static(path.join(_dirName, "public")))
 
 app.get('/', (req, res) => {
-    res.send("")
+    res.sendFile(path.join(_dirName, "views", "home.html"))
 })
 
 
