@@ -1,36 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>assinar</title>
-    <link rel="stylesheet" href="/public/css/assinar.css">
+    <title>Assinatura Premium</title>
+    <link rel="stylesheet" href="/css/assinar.css">
 </head>
 <body>
-    <div class="formulario">
+    <form id="formulario">
         <h1>Assinatura Premium</h1>
-        <form id="formulario">
-            <label id="campoNome" name="campoNome">Nome:</label>
-            <input type="text" placeholder="Digite o seu nome">
-            <label id="campoEmail" name="campoEmail">Email: </label>
-            <input type="text" placeholder="Digite seu email">
-            <label id="campoSenha" name="campoSenha">Senha:</label>
-            <input type="password" placeholder="Digite sua Senha">
-            <label id="campoAssinatura" name="campoAssinatura">Assinatura: </label>
-
+        <label for="campoNome">Nome:</label>
+        <input type="text" id="campoNome" placeholder="Digite o seu nome">
+    
+        <label for="campoEmail">Email:</label>
+        <input type="email" id="campoEmail" placeholder="Digite seu email">
+    
+        <label for="campoSenha">Senha:</label>
+        <input type="password" id="campoSenha" placeholder="Digite sua senha">
+    
+        <label>Assinatura:</label>
+        <div class="opcoes-assinatura">
             <input type="radio" name="assinado" id="opcao1">
-            <label for="opcao1">Assinatura 1</label><br>
-
+            <label for="opcao1">Assinatura 1</label>
+    
             <input type="radio" name="assinado" id="opcao2">
-            <label for="opcao2">Assinatura 2</label><br>
-
+            <label for="opcao2">Assinatura 2</label>
+    
             <input type="radio" name="assinado" id="opcao3">
-            <label for="opcao3">Assinatura 3</label><br>
-        </form>
+            <label for="opcao3">Assinatura 3</label>
+        </div>
+    
         <div class="botoes">
-        <button  type="submit">Enviar</button>
-        <button  type="reset">Limpar</button>
-    </div>
-    </div>
+            <button type="button" onclick="irParaCheckout()">Enviar</button>
+            <button type="reset">Limpar</button>
+        </div>
+    </form>
+
+    <script src="/js/assinar.js"></script>
 </body>
 </html>

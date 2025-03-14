@@ -1,0 +1,14 @@
+[
+
+{
+  "usuario": {
+    "nome": "Tarik",
+    "email": "tarikponciano@gmail.com",
+    "senha": "12345"
+  },
+  "assinatura": {
+    "tipo": "Assinatura 2",
+    "id": "opcao2"
+  }
+}
+]
