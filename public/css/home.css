@@ -14,6 +14,11 @@
     margin-inline: 2vw;
 }
 
+a{
+    text-decoration: none;
+    color: #252525;
+}
+
 .logo{
     margin-inline: 4vw;
 }
