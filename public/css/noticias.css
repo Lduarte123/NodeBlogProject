@@ -1,11 +1,11 @@
-.body{
+.body {
     background-color: black;
     background-image: url("/image/tecnologia_image.png");
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
 }
 
-.container{     
+.container {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: white;
     width: 90vw;
@@ -14,23 +14,58 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: bottom;
+    justify-content: flex-start; /* Alinha o conteúdo para o topo */
     align-items: center;
-
-    /* gpt */
     position: absolute; /* Posiciona o container de forma absoluta */
     top: 50%; /* Coloca no meio da tela */
     left: 50%; /* Coloca no meio da tela */
     transform: translate(-50%, -50%); /* Ajusta o container para ficar centralizado */
 }
 
-.inner-container{
-    font-family:'Courier New', Courier, monospace;
+.titulo-inner-container1 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.inner-container1 {
     background-color: rgb(201, 201, 201);
     width: 20em; /* Largura do container interno */
-    padding: 50px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: left;
-    margin-right: auto;
+    margin: 10px; /* Pequeno espaço entre as divs */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Garante que os itens dentro da div se alinhem no topo */
+    flex-shrink: 0; /* Impede que a div encolha caso o conteúdo seja grande */
+}
+
+.texto-adicional1 {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Ajusta o espaçamento entre a imagem e o texto */
+}
+
+.inner-container1 img {
+    width: 100%; /* Ajusta a imagem para ocupar 100% da largura da div */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 5px; /* Canto arredondado opcional */
+    object-fit: cover; /* Faz com que a imagem preencha a div sem distorcer */
+    max-height: 200px; /* Limita a altura da imagem para evitar que ela fique muito alta */
+}
+
+.inner-container1:hover {
+    background-color: rgb(213, 213, 213);
+    color: rgb(0, 0, 0);
+    transform: scale(1.01);
+}
+
+/* Flexbox para alinhar as divs lado a lado */
+#noticias-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as divs quebrem para a próxima linha, se necessário */
+    justify-content: flex-start; /* Alinha as divs no início, deixando elas lado a lado */
+    gap: 10px; /* Define um espaçamento de 10px entre as divs */
+    width: 100%;
+    padding: 20px; /* Ajusta o espaço dentro do container */
 }

@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "image": "https://www.showmetech.com.br/wp-content/uploads//2017/07/15090961835_c4f26e4890_b-jpg-webp.webp",
+        "titulo": "tecnologias ultrapassadas",
+        "texto-adicional":  "veja aqui quais são as tecnologias ultrapassadas e que estão obsoletas"
+    },
+    {
+        "id": 2,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2wpvYm4M7jno79z6isiWg2h0bREYLgTtNGQ&s",
+        "titulo": "Novo framework para Mobile",
+        "texto-adicional":  "framewor mais versátil e eficiente para desenvolvimento de aplicativos móveis"
+    }
+]

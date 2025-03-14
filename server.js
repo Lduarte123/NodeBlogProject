@@ -1,11 +1,14 @@
+import { error } from 'console';
 import express from 'express';
 import fs from 'fs';
 import path from 'path';
 import bodyParser from 'body-parser';
 
+
 const app = express();
 const port = 3000;
 const _dirName = path.resolve();
+const noticiasPath = path.join(_dirName, "data", "noticias.json")
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
@@ -68,6 +71,17 @@ app.post('/register', (req, res) => {
 
     res.send('Usuário registrado com sucesso!');
 });
+
+app.get("/api/noticias/", (req, res) => {
+    fs.readFile(noticiasPath, "utf8", (err, data) => {
+        if (err) {
+            res.status(500).json({ "error": "erro ao ler o arquivo" })
+        }
+        else 
+            res.json(JSON.parse(data))
+
+    })
+})
 
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
