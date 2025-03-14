@@ -8,6 +8,7 @@ const port = 3000;
 const _dirName = path.resolve();
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(express.static(path.join(_dirName, 'public')));
 
 function carregarUsuarios() {
@@ -34,15 +35,20 @@ app.get('/login', (req, res) => {
 
 app.post('/login', (req, res) => {
     const { usuario, senha } = req.body;
+    console.log('Usuário:', usuario, 'Senha:', senha);
     const usuarios = carregarUsuarios();
     const usuarioEncontrado = usuarios.find(user => user.usuario === usuario && user.senha === senha);
 
     if (usuarioEncontrado) {
-        res.send('Login bem-sucedido!');
+        const token = new Date().getTime();
+        res.status(200).json({ token });
     } else {
-        res.send('Usuário ou senha incorretos!');
+        console.log('Usuário ou senha incorretos');
+        res.status(401).json({ message: 'Usuário ou senha incorretos!' });
     }
 });
+
+
 
 app.get('/register', (req, res) => {
     res.sendFile(path.join(_dirName, 'views', 'register.html'));
