@@ -24,13 +24,27 @@
     transform: translate(-50%, -50%); /* Ajusta o container para ficar centralizado */
 }
 
-.inner-container{
+.titulo-inner-container1{
     font-family:'Courier New', Courier, monospace;
+}
+
+.inner-container1{
     background-color: rgb(201, 201, 201);
     width: 20em; /* Largura do container interno */
     padding: 50px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: left;
+    margin: 20px;
     margin-right: auto;
 }
+
+.texto-adicional1{
+    display: flex;
+    align-items: center;
+}
+
+.inner-container1:hover {
+    background-color: rgb(213, 213, 213);
+    color: rgb(0, 0, 0);
+    transform: scale(1.01);
+  }
